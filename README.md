@@ -1,5 +1,28 @@
+[![NPM](https://nodei.co/npm/cron-pkjq.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/cron-pkjq/)
+
 # CRON
 Scheduler with cron syntax
+
+## Installation
+
+- `npm install cron-pkjq`
+
+## Usage
+
+In Node.js:
+
+```javascript
+const cron = require("cron-pkjq");
+
+let newYearCron = cron.add('@yearly', () => { console.log('Happy new year!!!'); });
+
+
+// cron may be stopped
+cron.stop(newYearCron);
+
+// and may be started again
+cron.start(newYearCron);
+```
 
 
 ## Syntax
