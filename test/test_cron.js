@@ -10,8 +10,8 @@ const cron = require('../src/cron.js');
 
 
 let clock;
-before(function () { clock = sinon.useFakeTimers(1); });
-after(function () { clock.restore(); });
+beforeEach(function () { clock = sinon.useFakeTimers(1); });
+afterEach(function ()  { clock.restore(); });
 
 function resetClock() {
     clock.restore();
