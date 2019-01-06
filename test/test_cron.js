@@ -9,26 +9,29 @@ const sinon = require('sinon');
 const cron = require('../src/cron.js');
 
 
-let clock;
-beforeEach(function () { clock = sinon.useFakeTimers(1); });
-afterEach(function ()  { clock.restore(); });
 
-function resetClock() {
-    clock.restore();
-    clock = sinon.useFakeTimers(1);
-}
-
-
-function PrintCurrentTime() {
-    //console.log('\t::Date: ' + (new Date()).toString(), (new Date().getTime()));
-}
-
-function PrintTaskFireTime(task) {
-    //console.log('\t::FireTime: ' + (new Date(task.NextFireTimestamp)).toString(), task.NextFireTimestamp, '\tNow: ' + (new Date()).toString(), (new Date().getTime()));
-}
 
 
 describe('cron', function () {
+    let clock;
+    beforeEach(function () { clock = sinon.useFakeTimers(1); });
+    afterEach(function ()  { clock.restore(); });
+
+    function resetClock() {
+        clock.restore();
+        clock = sinon.useFakeTimers(1);
+    }
+
+
+    function PrintCurrentTime() {
+        //console.log('\t::Date: ' + (new Date()).toString(), (new Date().getTime()));
+    }
+
+    function PrintTaskFireTime(task) {
+        //console.log('\t::FireTime: ' + (new Date(task.NextFireTimestamp)).toString(), task.NextFireTimestamp, '\tNow: ' + (new Date()).toString(), (new Date().getTime()));
+    }
+    ///////////////////////////////////////////////////////////////////////////////////
+
        
 	it('start and stop task before it fired', function () {
         PrintCurrentTime();
