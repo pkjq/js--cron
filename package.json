@@ -1,6 +1,6 @@
 {
   "name": "cron-pkjq",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Scheduler with cron syntax",
   "main": "src/cron.js",
   "keywords": [
