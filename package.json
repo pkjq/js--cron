@@ -1,6 +1,6 @@
 {
   "name": "cron-pkjq",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Scheduler with cron syntax",
   "main": "src/cron.js",
   "keywords": [
@@ -9,7 +9,7 @@
   "author": "pkjq",
   "license": "MIT",
   "dependencies": {
-    "cron-parser": "^2.6.0",
+    "cron-parser": "^2.7.3",
     "long-timeout": "^0.1.1"
   },
   "devDependencies": {
